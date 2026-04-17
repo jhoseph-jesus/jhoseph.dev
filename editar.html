@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Editar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="container py-5">
+    <h3>Editar Información</h3>
+
+    <input
+      id="perfil"
+      class="form-control mb-2"
+      placeholder="Perfil profesional"
+    />
+
+    <input
+      id="fotoPerfil"
+      class="form-control mb-2"
+      placeholder="URL de foto de perfil"
+    />
+
+    <input id="h1" class="form-control mb-2" placeholder="Habilidad 1" />
+    <input id="h2" class="form-control mb-2" placeholder="Habilidad 2" />
+    <input id="h3" class="form-control mb-2" placeholder="Habilidad 3" />
+
+    <h4 class="mt-4">Proyectos</h4>
+
+    <input id="img1" class="form-control mb-2" placeholder="URL Imagen 1" />
+    <input id="title1" class="form-control mb-2" placeholder="Título 1" />
+    <input id="desc1" class="form-control mb-2" placeholder="Descripción 1" />
+
+    <input id="img2" class="form-control mb-2" placeholder="URL Imagen 2" />
+    <input id="title2" class="form-control mb-2" placeholder="Título 2" />
+    <input id="desc2" class="form-control mb-2" placeholder="Descripción 2" />
+
+    <input id="img3" class="form-control mb-2" placeholder="URL Imagen 3" />
+    <input id="title3" class="form-control mb-2" placeholder="Título 3" />
+    <input id="desc3" class="form-control mb-2" placeholder="Descripción 3" />
+
+    <button class="btn btn-success mt-3" onclick="guardar()">Guardar</button>
+
+    <script>
+      function guardar() {
+        localStorage.setItem("perfil", document.getElementById("perfil").value);
+        localStorage.setItem(
+          "fotoPerfil",
+          document.getElementById("fotoPerfil").value,
+        );
+
+        localStorage.setItem("h1", document.getElementById("h1").value);
+        localStorage.setItem("h2", document.getElementById("h2").value);
+        localStorage.setItem("h3", document.getElementById("h3").value);
+
+        localStorage.setItem("img1", document.getElementById("img1").value);
+        localStorage.setItem("title1", document.getElementById("title1").value);
+        localStorage.setItem("desc1", document.getElementById("desc1").value);
+
+        localStorage.setItem("img2", document.getElementById("img2").value);
+        localStorage.setItem("title2", document.getElementById("title2").value);
+        localStorage.setItem("desc2", document.getElementById("desc2").value);
+
+        localStorage.setItem("img3", document.getElementById("img3").value);
+        localStorage.setItem("title3", document.getElementById("title3").value);
+        localStorage.setItem("desc3", document.getElementById("desc3").value);
+
+        alert("Guardado correctamente");
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 800);
+      }
+    </script>
+  </body>
+</html>
